@@ -7,4 +7,8 @@ router.get('/', (req, res) => {
   res.render('index', { title: 'Express' });
 });
 
+router.get('/storyPreview', (req, res) => {
+  res.render('storyPreview', { title: 'Stroy preview ' });
+});
+
 export default router;

@@ -10,6 +10,7 @@
     "test": "export NODE_ENV='test' && jest --verbose test/"
   },
   "dependencies": {
+    "bulma": "^0.9.1",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "dotenv": "^8.2.0",
@@ -17,7 +18,7 @@
     "http-errors": "~1.6.3",
     "mongoose": "^5.10.15",
     "morgan": "~1.9.1",
-    "pug": "2.0.0-beta11"
+    "pug": "^2.0.0-beta11"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.7",
