@@ -1,5 +1,47 @@
 extends layout
-		
+
 block content
-  h1= title
-  p(style={color: 'red', background: 'green'})  Welcome to (sotry ) #{title}
+  div(class="main_container")
+    h1(class="title")=title
+    div(class="columns  is-mobile ")
+      div(class="column  is-12 ") 
+        div(class="tile")
+          div(class="tile is-parent is-vertical")
+            article(class="tile is-child notification is-primary")
+              p(class="title") this is title
+              p(class="subtitle") let's read
+              img(src="lol.png")
+    div(class="columns  is-mobile")
+      div(class="column  is-12") 
+        div(class="tile")
+          div(class="tile is-parent is-vertical")
+            article(class="tile is-child notification is-primary")
+              p(class="title") this is title
+              p(class="subtitle") let's read
+    div(class="columns  is-mobile")
+      div(class="column  is-12") 
+        div(class="tile")
+          div(class="tile is-parent is-vertical")
+            article(class="tile is-child notification is-primary")
+              p(class="title") this is title
+              p(class="subtitle") let's read
+
+
+  style(type="text/css").
+    .main_container{
+    text-align: center; /*让div内部文字居中*/
+        margin: 100px 100px 75px 200px;
+        width: 600px;
+        height: 1000px;
+         position: relative;
+  
+      }
+      .tile{
+        height:300px
+      }
+    #lol{
+        display: flex;
+
+    }
+  
+
