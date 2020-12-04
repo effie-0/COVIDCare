@@ -1,7 +1,6 @@
 // const json_data = require('../data/storydata.json'); //(with path)
 import * as storyDetail_1 from "../../data/storyDetail_1.json"
 import * as storyDetail_2 from "../../data/storyDetail_2.json"
-import * as storyPreview from "../../data/storyPreview.json"
 
 
 class storysharingController {

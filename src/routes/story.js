@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
 
 });
 
-router.get('/storydetail', (req, res) => {
+router.get('/storydetailsData', (req, res) => {
 
   var final_respond= storysharingController.allStories(req, res)
   

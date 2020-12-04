@@ -15,4 +15,12 @@ router.get('/storyPreview', (req, res) => {
   });
 });
 
+router.get('/storydetail', (req, res) => {
+  res.render('storydetail', {
+    title: 'Stroy details '
+  });
+});
+
+
+
 export default router;
