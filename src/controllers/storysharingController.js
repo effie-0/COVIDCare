@@ -8,12 +8,12 @@ class storysharingController {
 
     static async allStories(req, res) {
         var lol= storyDetail_1
-       return res.status(200).json({
+        return res.status(200).json({
             code: 1,
             message: "success",
             data: lol
-        });
-    }
+        });   
+     }
     static async storyDetails(req, res) {
         var lol= json_data
        return res.status(200).json({

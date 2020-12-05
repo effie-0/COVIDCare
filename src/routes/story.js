@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
   res.send('  respond with a story');
 
 });
-
+//http://localhost:3000/storysharing/storydetailsData
 router.get('/storydetailsData', (req, res) => {
 
   var final_respond= storysharingController.allStories(req, res)
