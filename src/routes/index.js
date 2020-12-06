@@ -31,8 +31,8 @@ fetch('http://localhost:3000/storysharing/storydetailsData')
             res.render('storyPreview', {
         title: 'Stroy preview '    ,
         story_title_1: data.data[0].title,
-        story_title_2:'he fight with Coid as a 69 years old fighter',
-        story_title_3:'he fight with Coid as a 69 years old fighter',
+        story_title_2:data.data[1].title,
+        story_title_3:data.data[2].title,
         thumbup_number_1:'10',
         thumbup_number_2:'20',
         thumbup_number_3:'30',
@@ -55,10 +55,34 @@ fetch('http://localhost:3000/storysharing/storydetailsData')
 
 router.get('/storydetail', (req, res) => {
 
+fetch('http://localhost:3000/storysharing/storydetailsData')
+  .then(
+    function(response) {
+      if (response.status !== 200) {
+        console.log('Looks like there was a problem. Status Code: ' +
+          response.status);
+        return;
+      }
+      // Examine the text in the response
+        response.json().then(function(data) {
+          console.log(data);
 
-  res.render('storydetail', {
-    title: 'Stroy details '
+          console.log("哈哈啊 "+data.data[0].title);
+
+          res.render('storydetail', {
+              title: 'Stroy details ',
+              story_content:data.data[0].content,
+              story_title:data.data[0].title,
+              story_comment:data.data[0].comments
+            });
+      });
+    }
+  )
+  .catch(function(err) {
+    console.log('Fetch Error :-S', err);
   });
+
+ 
 });
 
 

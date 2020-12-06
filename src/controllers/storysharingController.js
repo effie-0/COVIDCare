@@ -22,7 +22,18 @@ class storysharingController {
             data: lol
         });
     }
+   static async addstoryDetails(req, res) {
+          var tmp = {
+            comments: req.body.comment,
+        }
+        storyDetail_1[0].comments.push(req.body.comment)
 
+        return res.status(200).json({
+            code: 1,
+            message: "success",
+            data: tmp
+        });
+    }
 }
 
 module.exports = storysharingController;

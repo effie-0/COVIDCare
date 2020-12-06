@@ -18,4 +18,14 @@ router.get('/storydetailsData', (req, res) => {
 
 });
 
+//http://localhost:3000/storysharing/addstorydetailsData
+router.post('/addstorydetailsData', (req, res) => {
+
+  var final_respond= storysharingController.addstoryDetails(req, res)
+  
+  res.send(final_respond);
+
+});
+
+
 export default router;
