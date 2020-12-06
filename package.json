@@ -10,6 +10,7 @@
     "test": "export NODE_ENV='test' && jest --verbose test/"
   },
   "dependencies": {
+    "bulma": "^0.9.1",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "dotenv": "^8.2.0",
