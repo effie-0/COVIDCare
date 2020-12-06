@@ -6,3 +6,15 @@ body {
 a {
   color: #00B7FF;
 }
+
+p.top {
+  vertical-align:top
+}
+
+.astext {
+  background:none;
+  border:none;
+  margin:0;
+  padding:0;
+  cursor: pointer;
+}

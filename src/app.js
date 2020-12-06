@@ -5,7 +5,8 @@ import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 
 import indexRouter from './routes/index';
-import usersRouter from './routes/user';
+import usersRouter from './routes/users';
+import gamesRouter from './routes/games';
 
 const app = express();
 
@@ -24,6 +25,7 @@ app.use('/', indexRouter);
 
 // Backend
 app.use('/users', usersRouter);
+app.use('/games', gamesRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
