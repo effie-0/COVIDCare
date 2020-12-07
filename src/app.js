@@ -6,6 +6,7 @@ import logger from 'morgan';
 
 import indexRouter from './routes/index';
 import usersRouter from './routes/user';
+import storyRouter from './routes/story';
 
 const app = express();
 
@@ -23,7 +24,8 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.use('/', indexRouter);
 
 // Backend
-app.use('/api/users', usersRouter);
+app.use('/users', usersRouter);
+app.use('/storysharing', storyRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

@@ -5,7 +5,7 @@
   "scripts": {
     "build": "rimraf dist/ && babel src/ --out-dir dist/",
     "coverage": "export NODE_ENV='test' && jest --verbose test/ --bail --runInBand --coverage",
-    "lint": "eslint 'src/' && eslint 'public/javascripts/'",
+       "lint": "eslint 'src/' && eslint 'public/javascripts/'",
     "start": "npm run build && node dist/bin/www",
     "serve": "node dist/bin/www",
     "test": "export NODE_ENV='test' && jest --verbose test/"
@@ -19,14 +19,15 @@
     "http-errors": "~1.6.3",
     "mongoose": "^5.10.15",
     "morgan": "~1.9.1",
-    "pug": "2.0.0-beta11"
+    "node-fetch": "^2.6.1",
+    "pug": "^2.0.0-beta11"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.7",
     "@babel/core": "^7.12.7",
     "@babel/preset-env": "^7.12.7",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^7.14.0",
+    "eslint": "^7.15.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
     "jest": "^26.6.3",
