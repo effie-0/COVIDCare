@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/storyPreview', (req, res) => {
-  fetch('http://localhost:3000/storysharing/storydetailsData')
+  fetch('/storysharing/storydetailsData')
     .then(
       (response) => {
         if (response.status !== 200) {
@@ -48,7 +48,7 @@ router.get('/storyPreview', (req, res) => {
 });
 
 router.get('/storydetail', (req, res) => {
-  fetch('http://localhost:3000/storysharing/storydetailsData')
+  fetch('/storysharing/storydetailsData')
     .then(
       (response) => {
         if (response.status !== 200) {

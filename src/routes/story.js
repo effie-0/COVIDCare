@@ -11,7 +11,6 @@ router.get('/', (req, res) => {
 // http://localhost:3000/storysharing/storydetailsData
 router.get('/storydetailsData', (req, res) => {
   const finalRespond = storysharingController.allStories(req, res);
-
   res.send(finalRespond);
 });
 
