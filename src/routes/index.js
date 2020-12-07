@@ -1,7 +1,6 @@
 import express from 'express';
 
 const fetch = require('node-fetch');
-const storysharingController = require('../controllers/storysharingController');
 
 const router = express.Router();
 

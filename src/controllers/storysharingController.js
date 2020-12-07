@@ -1,5 +1,5 @@
 // const jsonData = require('../data/storydata.json'); //(with path)
-import * as storyDetail from '../../data/storyDetail.json';
+import * as storyDetail from '../../data/storyDetail_1.json';
 
 class storysharingController {
   static async allStories(req, res) {
@@ -12,7 +12,7 @@ class storysharingController {
   }
 
   static async storyDetails(req, res) {
-    const storyData = jsonData;
+    const storyData = storyDetail;
     return res.status(200).json({
       code: 1,
       message: 'success',
