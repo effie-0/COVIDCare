@@ -5,8 +5,6 @@ import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 
 import indexRouter from './routes/index';
-import usersRouter from './routes/users';
-import gamesRouter from './routes/games';
 import meditationsRouter from './routes/meditations';
 
 const app = express();
@@ -25,8 +23,6 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.use('/', indexRouter);
 
 // Backend
-app.use('/users', usersRouter);
-app.use('/games', gamesRouter);
 app.use('/meditations', meditationsRouter);
 
 // catch 404 and forward to error handler
