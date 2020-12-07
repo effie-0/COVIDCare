@@ -1,0 +1,151 @@
+extends layout
+
+block content
+  script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js')
+  script.
+    function submitComment() { 
+    var comment=document.getElementById("myTextarea").value
+
+    var tmp={
+      comment:comment
+    }
+    console.log("value is",comment)
+     $.post("https://srid-covid-care.herokuapp.com/storysharing/addstorydetailsData",tmp)
+    
+    location.reload();
+
+    };
+
+
+  doctype html
+  head
+    script(src="/javascripts/jquery-1.8.2.js")
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    meta(http-equiv='X-UA-Compatible' content='ie=edge')
+    title Blog Template - by Pete Houston
+    link(rel='stylesheet' href='css/bulma.css')
+    script(defer='' src='https://use.fontawesome.com/releases/v5.0.0/js/all.js')
+    link(rel='stylesheet' href='css/app.css')
+  nav.navbar.is-transparent
+    .navbar-brand
+      a.navbar-item(href='https://bulma.io')
+      .navbar-burger.burger(data-target='navbarExampleTransparentExample')
+        span
+        span
+        span
+    #navbarExampleTransparentExample.navbar-menu
+      .navbar-start
+        a.navbar-item(href='https://bulma.io/')  Home 
+        .navbar-item.has-dropdown.is-hoverable
+          a.navbar-link(href='/documentation/overview/start/')
+            | Docs
+          .navbar-dropdown.is-boxed
+            a.navbar-item(href='/documentation/overview/start/')
+              | Overview
+            a.navbar-item(href='https://bulma.io/documentation/modifiers/syntax/')
+              | Modifiers
+            a.navbar-item(href='https://bulma.io/documentation/columns/basics/')
+              | Columns
+            a.navbar-item(href='https://bulma.io/documentation/layout/container/')
+              | Layout
+            a.navbar-item(href='https://bulma.io/documentation/form/general/')
+              | Form
+            hr.navbar-divider
+            a.navbar-item(href='https://bulma.io/documentation/elements/box/')
+              | Elements
+            a.navbar-item.is-active(href='https://bulma.io/documentation/components/breadcrumb/')
+              | Components
+      .navbar-end
+        .navbar-item
+          .field.is-grouped
+            p.control
+              a.bd-tw-button.button(data-social-network='Twitter' data-social-action='tweet' data-social-target='http://localhost:4000' target='_blank' href='https://twitter.com/intent/tweet?text=Bulma: a modern CSS framework based on Flexbox&hashtags=bulmaio&url=http://localhost:4000&via=jgthms')
+                span.icon
+                  i.fab.fa-twitter
+                span  Tweet 
+            p.control
+              a.button.is-primary(href='https://github.com/jgthms/bulma/archive/0.5.1.zip')
+                span.icon
+                  i.fas.fa-download
+                span Download
+  section.section
+    .container
+      .box
+        .columns
+          .column.is-8
+            article.article
+              .article-header
+                .article-title
+                  h2.title.is-2 #{story_title}
+                .article-meta
+                  .level
+                    .level-left
+                      .level-item
+                        span.icon
+                          i.fas.fa-user
+                        a.is-link(href='/')  Pete Houston
+                      .level-item
+                        span.icon
+                          i.fas.fa-calendar
+                        |                           TUESDAY, JULY 20, 2010
+                      .level-item
+                        span.icon
+                          i.far.fa-thumbs-up
+                        |                           30
+              .article-image
+                figure.image
+                  img(src='img/article_image.jpg' alt='')
+              .article-content
+                .content
+                  p #{story_content}
+
+
+    each val in story_comment
+      .card
+        .card-content
+          .media
+            .media-left
+              figure.image.is-48x48
+                img(src='https://bulma.io/images/placeholders/96x96.png' alt='Placeholder image')
+            .media-content
+              p.title.is-4 John Smith
+              p.subtitle.is-6 @johnsmith
+          .content #{val}
+            br
+            time(datetime='2016-1-1') 11:09 PM - 1 Jan 2016
+        
+
+    //- .card
+    //-   .card-content
+    //-     .media
+    //-       .media-left
+    //-         figure.image.is-48x48
+    //-           img(src='https://bulma.io/images/placeholders/96x96.png' alt='Placeholder image')
+    //-       .media-content
+    //-         p.title.is-4 John Smith
+    //-         p.subtitle.is-6 @johnsmith
+    //-     .content #{story_comment}
+    //-       br
+    //-       time(datetime='2016-1-1') 11:09 PM - 1 Jan 2016
+    .container.pb-cmnt-container
+      .row
+        .col-md-6.col-md-offset-3
+          .panel.panel-info
+            .panel-body
+              textarea.pb-cmnt-textarea(placeholder='Write your comment here!',id='myTextarea')
+              form.form-inline
+                a.btn.btn-primary.pull-right(class='button is-rounded',style="background-color: #c5ab8a",onclick='submitComment()')
+                  | Send
+    style.
+      .pb-cmnt-container {
+      font-family: Lato;
+      margin-top: 100px;
+      }
+      .pb-cmnt-textarea {
+      resize: none;
+      padding: 20px;
+      height: 130px;
+      width: 100%;
+      border: 1px solid #f2f2f2;
+      }

@@ -4,7 +4,6 @@ import UserModel from '../../src/models/user';
 import UserDAO from '../../src/DAOs/user';
 import { MONGO_URI } from '../../src/utils/env';
 
-
 describe('test the UserDAO', () => {
   let mongoServer;
 
@@ -29,7 +28,7 @@ describe('test the UserDAO', () => {
     expect(userNotExist).toBeFalsy();
   });
 
-  test('test insertOne: insert a user', async function() {
+  test('test insertOne: insert a user', async () => {
     const mockUser = { username: 'Alex', password: '1245676324' };
     await UserDAO.insertOne(mockUser);
     const user = await UserModel.findOne({ username: 'Alex' });
@@ -37,12 +36,11 @@ describe('test the UserDAO', () => {
     expect(user.password).toBeDefined();
   });
 
-  test('test findOne: find a user', async function() {
+  test('test findOne: find a user', async () => {
     const mockUser = new UserModel({ username: 'Bob', password: '123123' });
     await mockUser.save();
     const user = await UserDAO.findOne('Bob');
     expect(user.username).toBe('Bob');
     expect(user.password).toBe('123123');
   });
-
 });

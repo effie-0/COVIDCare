@@ -5,7 +5,6 @@ import connect from '../../src/utils/connect';
 import UserModel from '../../src/models/user';
 import { MONGO_URI } from '../../src/utils/env';
 
-
 describe('test the UserDAO', () => {
   let mongoServer;
 
