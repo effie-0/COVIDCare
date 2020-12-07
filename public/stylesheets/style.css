@@ -11,6 +11,13 @@ p.top {
   vertical-align:top
 }
 
+p.right {
+  position:relative;
+  float:right;
+  top: 0;
+  right: 0;
+}
+
 .astext {
   background:none;
   border:none;

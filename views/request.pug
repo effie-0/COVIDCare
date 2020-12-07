@@ -20,21 +20,21 @@ block content
       p
         h2 Players Online
 
+    //source: Arun user: Sanjay
     table
       each val, index in online_users
-        if val.name != user
+        if val.name != user && val.name != source
           tr
             td.center #{val.name}
               td
                 a(href=`/users/${user}/${val.name}`)
                   button.btn.btn-success(type='button' id=`${val.name}` value=`${val.name}`) Request
         else
-          if source != undefined && val.name != undefined
-            p #{source}
+          if val.name == source
             tr
               td.center #{val.name}
                 td
-                  a(href=`/users/${val.name}/${user}`)
+                  a(href=`/game/${val.name}vs${user}`)
                     button.btn.btn-success(type='button' id=`${val.name}` value=`${val.name}`) Requested
     head
     
