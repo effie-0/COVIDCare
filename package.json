@@ -5,7 +5,7 @@
   "scripts": {
     "build": "rimraf dist/ && babel src/ --out-dir dist/",
     "coverage": "export NODE_ENV='test' && jest --verbose test/ --bail --runInBand --coverage",
-       "lint": "eslint 'src/' && eslint 'public/javascripts/'",
+    "lint": "eslint 'src/' && eslint 'public/javascripts/'",
     "start": "npm run build && node dist/bin/www",
     "serve": "node dist/bin/www",
     "test": "export NODE_ENV='test' && jest --verbose test/"
@@ -31,6 +31,7 @@
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
     "jest": "^26.6.3",
+    "node-sass": "^5.0.0",
     "rimraf": "^3.0.2",
     "supertest": "^6.0.1"
   },
