@@ -1,7 +1,7 @@
 import express from 'express';
 
 const router = express.Router();
-const users = require("../../data/users.json");
+const users = require('../../data/users.json');
 
 /* GET users listing. */
 router.get('/', (req, res) => {
@@ -9,13 +9,13 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:user', (req, res) => {
-  const user = req.params.user;
+  var user = req.params.user;
   res.render('users', { users, user });
 });
 
 router.get('/:source/:user', (req, res) => {
-  const user = req.params.user;
-  const source = req.params.source;
+  var user = req.params.user;
+  var source = req.params.source;
   res.render('request', { users, user, source });
 });
 

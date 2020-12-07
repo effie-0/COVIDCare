@@ -1,9 +1,9 @@
 import express from 'express';
 
 const router = express.Router();
-const games = require("../../data/games.json");
+const games = require('../../data/games.json');
 
-router.get('/', (req, res) => {  
+router.get('/', (req, res) => {
   res.render('games', { games });
 });
 
