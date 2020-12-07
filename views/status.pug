@@ -1,0 +1,29 @@
+extends layout
+
+block meta
+
+block scripts
+
+block links
+
+    body.bg-light
+        div(id='back-button', href='/') back
+        div(id='header')
+            h2 December 2020
+        img(id='snooze', src='./images/snooze.png')
+        div(id='no-entry')
+            h4 No entries for this month.
+        footer.page-footer.font-small.cyan.darken-3
+            .container
+                .row
+                    div.footer-button(id='emotion-highlight')
+                        img(src='./images/emotion-highlight.png')
+                    a.footer-button(id='history-dark', href='/status-empty-calendar')
+                        img(src='./images/history-dark.png')
+                    a.footer-button(id='add', href='/status-empty-add')
+                        img(src='./images/add.png')
+                    div.footer-button(id='edit-dark')
+                        img(src='./images/edit-dark.png')
+                    a.footer-button(id='home-dark', href='/')
+                        img(src='./images/home-dark.png')
+

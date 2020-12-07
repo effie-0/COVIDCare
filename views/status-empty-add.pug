@@ -1,0 +1,53 @@
+extends layout
+
+block meta
+
+block scripts
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+    script(src="https://cdn.jsdelivr.net/momentjs/2.14.1/moment.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js")
+    script.
+        $(function () {
+            $('#datetimepicker1').datetimepicker();
+        });
+
+block links
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css")
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css")
+
+    body.bg-light
+        div(id='back-button', href='/status') back
+        div(id='header')
+            h2 December 2020
+        br
+        .container
+            .panel.panel-primary
+                .panel-body
+                    .row
+                        .col-md-6
+                            .form-group
+                                label.control-label Current Time
+                                #datetimepicker1.input-group.date
+                                    input.form-control(type='text')
+                                    span.input-group-addon
+                                        span.glyphicon.glyphicon-calendar
+        a(href='/status-one')
+            img.emotion(id='awesome', src='./images/awesome.png')
+        img.emotion(id='good', src='./images/good.png')
+        img.emotion(id='bored', src='./images/bored.png')
+        img.emotion(id='stressed', src='./images/stressed.png')
+        img.emotion(id='horrible', src='./images/horrible.png')
+        footer.page-footer.font-small.cyan.darken-3
+            .container
+                .row
+                    a.footer-button(id='emotion-dark', href='/status')
+                        img(src='./images/emotion-dark.png')
+                    a.footer-button(id='history-dark', href='/status-empty-calendar')
+                        img(src='./images/history-dark.png')
+                    div.footer-button(id='add')
+                        img(src='./images/add.png')
+                    div.footer-button(id='edit-dark')
+                        img(src='./images/edit-dark.png')
+                    a.footer-button(id='home-dark', href='/')
+                        img(src='./images/home-dark.png')

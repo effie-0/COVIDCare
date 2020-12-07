@@ -1,8 +1,56 @@
 body {
-  padding: 50px;
+  padding: 5px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
 }
+
+#back-button {
+  margin: auto;
+  width: 10%;
+  display:inline-block;
+  color: #5DB075;
+}
+
+#header {
+  margin: auto;
+  width: 90%;
+  display:inline-block;
+  text-align: center;
+}
+
+#no-entry {
+  margin: auto;
+  width: 100%;
+  text-align: center;
+}
+
+#snooze {
+  width: 100%;
+}
+
+.footer-button {
+  width: 20%;
+  height: 65px;
+  border: white;
+  padding: 0px;
+}
+
+footer {
+  position:absolute;
+  bottom:0;
+  width:100%;
+}
+
+.jumbotron-fluid {
+  background-color: #D3FDDF;
+  padding: 20px;
+}
+
+.emotion {
+  width: 33%;
+}
+
+
