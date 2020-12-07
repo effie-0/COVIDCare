@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  div.content.is-medium
+    each record in healthRecords
+      if record.isCelsius
+        div.block.bottom-border
+          a.has-text-primary(href=`record-details/${record.time}`)
+            .level.is-mobile
+              .level-left
+                .level-item !{record.month}.!{record.day}
+              .level-right
+                if record.isCelsius
+                  .level-item !{record.temperature} °C
+                else
+                  .level-item !{record.temperature} °F

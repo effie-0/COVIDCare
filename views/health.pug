@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  article(class="message py-2")
+    div(class="message-body") Meow~ I am hungry now, could you win me a snack by entering your health status?
+  figure.image.py-5
+    img(src="/images/cat.png")
+  .control.columns.is-mobile.is-centered.py-3
+    a.column.is-half.button.is-primary(href="symptoms") Enter Status
+  .control.columns.is-mobile.is-centered.py-3
+    a.column.is-half.button.is-primary(href="health-records") View Status

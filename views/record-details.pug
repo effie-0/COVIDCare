@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  if record
+    h4.title !{record.month}.!{record.day}
+    div.content.is-medium
+      div.block.bottom-border
+        .level.is-mobile
+          .level-left
+            if record.isCelsius
+              .level-item Temperature: !{record.temperature} °C
+            else
+              .level-item Temperature: !{record.temperature} °F
+      each symptom in record.symptoms
+        div.block.bottom-border
+          .level.is-mobile
+            .level-left
+              .level-item !{symptom}
