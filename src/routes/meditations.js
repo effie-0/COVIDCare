@@ -1,18 +1,17 @@
 import express from 'express';
 
 const router = express.Router();
+const meditations = require('../../data/meditations.json');
 
 /* GET users listing. */
 router.get('/', (req, res) => {
-    const meditations = require("../../data/meditations.json");
-    res.render('meditations', { meditations: meditations });
+  res.render('meditations', { meditations });
 });
 
 router.get('/:name', (req, res) => {
-    const meditation_name = req.params.name;
-    const file_name = meditation_name;
-    res.render('music_player', { file: file_name });
+  const meditationName = req.params.name;
+  const fileName = meditationName;
+  res.render('musicPlayer', { file: fileName });
 });
-
 
 export default router;
