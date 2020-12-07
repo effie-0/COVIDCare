@@ -6,7 +6,8 @@ import logger from 'morgan';
 
 import indexRouter from './routes/index';
 import usersRouter from './routes/user';
-import storyRouter from './routes/story'
+import storyRouter from './routes/story';
+
 const app = express();
 
 // view engine setup
