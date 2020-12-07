@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "build": "rimraf dist/ && babel src/ --out-dir dist/",
+    "coverage": "export NODE_ENV='test' && jest --verbose test/ --bail --runInBand --coverage",
     "lint": "eslint 'src/' && eslint 'public/javascripts/'",
     "start": "npm run build && node dist/bin/www",
     "serve": "node dist/bin/www",
