@@ -1,6 +1,7 @@
 import express from 'express';
 
 const fetch = require('node-fetch');
+const indexController = require('../controllers/index');
 
 const router = express.Router();
 
@@ -75,5 +76,11 @@ router.get('/storydetail', (req, res) => {
       console.log('Fetch Error :-S', err);
     });
 });
+
+router.get('/status', indexController.statusPage);
+router.get('/status-empty-add', indexController.statusEmptyAddPage);
+router.get('/status-empty-calendar', indexController.statusEmptyCalendarPage);
+router.get('/status-one', indexController.statusOnePage);
+router.get('/status-one-calendar', indexController.statusOneCalendarPage);
 
 export default router;

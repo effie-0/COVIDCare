@@ -1,0 +1,32 @@
+extends layout
+
+block meta
+
+block scripts
+
+block links
+
+    body.bg-light
+        div(id='back-button', href='/') back
+        div(id='header')
+            h2 December 2020
+        br
+        .jumbotron.jumbotron-fluid Monday, December 7, 2020
+            .container
+                h5.display-4 Relax
+                p.lead Awesome
+                p.end 12:00 PM
+        footer.page-footer.font-small.cyan.darken-3
+            .container
+                .row
+                    div.footer-button(id='emotion-highlight')
+                        img(src='./images/emotion-highlight.png')
+                    a.footer-button(id='history-dark', href='/status-one-calendar')
+                        img(src='./images/history-dark.png')
+                    div.footer-button(id='add')
+                        img(src='./images/add.png')
+                    div.footer-button(id='edit-dark')
+                        img(src='./images/edit-dark.png')
+                    a.footer-button(id='home-dark', href='/')
+                        img(src='./images/home-dark.png')
+
