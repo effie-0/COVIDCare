@@ -1,7 +1,7 @@
 import UserDAO from '../DAOs/user';
 
 export default class UserController {
-  static async signin(req, res) {
+  static async login(req, res) {
     const { username, password } = req.body;
 
     const user = await UserDAO.findOne(username);

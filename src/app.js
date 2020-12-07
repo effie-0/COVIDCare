@@ -8,6 +8,9 @@ import indexRouter from './routes/index';
 import usersRouter from './routes/user';
 import storyRouter from './routes/story';
 import meditationsRouter from './routes/meditations';
+import playersRouter from './routes/players';
+import gamesRouter from './routes/games';
+import gameRouter from './routes/game';
 
 const app = express();
 
@@ -25,6 +28,9 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.use('/', indexRouter);
 
 // Backend
+app.use('/players', playersRouter);
+app.use('/games', gamesRouter);
+app.use('/game', gameRouter);
 app.use('/users', usersRouter);
 app.use('/storysharing', storyRouter);
 app.use('/meditations', meditationsRouter);
