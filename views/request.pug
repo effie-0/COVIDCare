@@ -33,8 +33,8 @@ block content
             tr
               td.center #{val.name}
                 td
-                  a(id = "redirect" href=`/game/${val.name}vs${user}`)
-                    button.btn.btn-danger(type='button' id=`${val.name}` value=`${val.name}` onclick="return sendRequest()") Accept
+                  a(href=`/game/${val.name}vs${user}`)
+                    button.btn.btn-danger(type='button' id=`${val.name}` value=`${val.name}` onclick="return sendRequest()")  Accept
   div(onload="sendRequest()")
   script.
     function sendRequest() {

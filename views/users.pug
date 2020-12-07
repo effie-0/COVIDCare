@@ -28,13 +28,5 @@ block content
               td
                 a(href=`/users/${user}/${val.name}`)
                   button.btn.btn-success(type='button' id=`${val.name}` value=`${val.name}`) Request
-        else
-          if source != undefined && val.name != undefined
-            p #{source}
-            tr
-              td.center #{val.name}
-                td
-                  a(href=`/users/${val.name}/${user}`)
-                    button.btn.btn-success(type='button' id=`${val.name}` value=`${val.name}`) Requested
     head
     
