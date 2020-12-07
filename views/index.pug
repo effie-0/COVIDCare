@@ -1,5 +1,8 @@
 extends layout
 
+block script
+  script(type="module" src="/javascripts/sign-in.js")
+
 block content
   h1= title
-  p Welcome to (index) #{title}
+  p Welcome to  #{title}
