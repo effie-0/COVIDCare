@@ -16,7 +16,7 @@ describe('test the UserDAO', () => {
     // insert a user
     // const req = { username: 'Mu', password: '122222' };
     // const res = await request(server.server)
-    //   .post(`/users/${req.username}`)
+    //   .post(`/api/users/${req.username}`)
     //   .type('form')
     //   .send(req);
     // expect(res.status).toBe(201);
@@ -28,11 +28,11 @@ describe('test the UserDAO', () => {
     await mongoServer.close();
   });
 
-  test('POST /users', async () => {
+  test('POST /api/users', async () => {
     const req = { username: 'Marc', password: '112222' };
 
     return request(app)
-      .post('/users')
+      .post('/api/users')
       .type('form')
       .send(req)
       .expect(404);
