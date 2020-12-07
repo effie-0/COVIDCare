@@ -1,0 +1,131 @@
+extends layout
+
+block content
+  meta(name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+
+  div(class="main_container")
+    h1(class="title")=title
+    div(class="columns  is-mobile ")
+      div(class="column  is-12 ") 
+        div(class="tile")
+          div(class="tile is-parent is-vertical")
+            article(class="tile is-child notification is-primary")
+              img(class="headshot", src="./pics/lol.png")       
+              img(class="thumbup", src="./pics/thumbup.png")  
+              button(class="button is-primary is-light thumbup_number") #{thumbup_number_1}
+
+              p(class="story_title") #{story_title_1}
+              button(class="button is-link is-rounded readmore_button",onclick="window.location.href='/storydetail'",style="background-color: #c5ab8a") let's read
+              button(class=" button is-primary is-light number_comments" ) Comments: #{comment_number_1}
+    div(class="columns  is-mobile")
+      div(class="column  is-12") 
+        div(class="tile")
+          div(class="tile is-parent is-vertical")
+            article(class="tile is-child notification is-primary ")
+              img(class="headshot", src="./pics/lol.png")
+              img(class="thumbup", src="./pics/thumbup.png")
+            
+              button(class="button is-primary is-light thumbup_number") #{thumbup_number_2}
+  
+              p(class="story_title")  #{story_title_2}
+              button(class="button is-link is-rounded readmore_button",onclick="window.location.href='/storydetail'",style="background-color: #c5ab8a") let's read
+              button(class=" button is-primary is-light number_comments" ) Comments: #{comment_number_2}
+
+    div(class="columns  is-mobile")
+      div(class="column  is-12") 
+        div(class="tile")
+          div(class="tile is-parent is-vertical")
+            article(class="tile is-child notification is-primary")
+              img(class="headshot", src="./pics/lol.png")
+              img(class="thumbup", src="./pics/thumbup.png")
+              button(class="button is-primary is-light thumbup_number") #{thumbup_number_3}
+
+              p(class="story_title")  #{story_title_3}
+              button(class="button is-link is-rounded readmore_button",onclick="window.location.href='/storydetail'",style="background-color: #c5ab8a") let's read
+              button(class=" button is-primary is-light number_comments" ) Comments: #{comment_number_3}
+
+    nav.pagination(role='navigation' aria-label='pagination')
+      a.pagination-previous(title='This is the first page' disabled='') Previous
+      a.pagination-next Next page
+      ul.pagination-list
+        li
+          a.pagination-link.is-current(aria-label='Page 1' aria-current='page') 1
+        li
+          a.pagination-link(aria-label='Goto page 2') 2
+        li
+          a.pagination-link(aria-label='Goto page 3') 3
+        li
+          a.pagination-link(aria-label='Goto page 4') 4
+        li
+          a.pagination-link(aria-label='Goto page 5') 5
+        li
+          a.pagination-link(aria-label='Goto page 6') 6
+        li
+          a.pagination-link(aria-label='Goto page 7') 7
+
+  style(type="text/css").
+  
+    .main_container{
+        text-align: center; /*让div内部文字居中*/
+         position: relative;
+        width: 110%;
+        margin-left: 5%;
+        margin-right:5%;
+        right:25px
+  
+      }
+      .tile{
+        height:300px;
+      }
+    #lol{
+        display: flex;
+
+    }
+    .readmore_button{
+      left:90px;
+      position: relative;
+      bottom : 180px;
+      width:120px;
+      margin:20px;
+    
+    }
+    .story_title{
+      font-size: 20px;
+      left:100px;
+      position: relative;
+      bottom :160px;
+      width:200px;
+      height:120px;
+    }
+    .headshot{
+      width:120px;
+      height:150px;
+      position: relative;
+      right: 50px;
+    }
+
+    .thumbup{
+      width:40px;
+      height:40px;
+      position: relative;
+      top:60px;
+      right:120px;
+    }
+    .thumbup_number{
+      position: relative;
+      top:170px;
+       width:40px;
+      height:40px;
+      right:100px
+
+    }
+    .number_comments{
+      bottom:185px;
+      width:120px;
+      left:90px
+    }
+    .icon_test{
+      height:100px;
+      width:200px;
+    }
+

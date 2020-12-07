@@ -1,0 +1,110 @@
+extends layout
+
+block content
+  div(class="main_container")
+    h1(class="title")=title
+    div(class="columns  is-mobile ")
+      div(class="column  is-12 ") 
+        div(class="tile")
+          div(class="tile is-parent is-vertical")
+            article(class="tile is-child notification is-primary")
+              img(class="headshot", src="./pics/lol.png")       
+              img(class="thumbup", src="./pics/thumbup.png")  
+              button(class="button is-primary is-light thumbup_number") 50
+
+              p(class="story_title") he fight with Coiv as a 69 years old fighter 
+              button(class="button is-link readmore_button") let's read
+              button(class=" button is-primary is-light number_comments" ) Comments: 30 
+    div(class="columns  is-mobile")
+      div(class="column  is-12") 
+        div(class="tile")
+          div(class="tile is-parent is-vertical")
+            article(class="tile is-child notification is-primary")
+              img(class="headshot", src="./pics/lol.png")
+              img(class="thumbup", src="./pics/thumbup.png")
+            
+              button(class="button is-primary is-light thumbup_number") 50
+  
+              p(class="story_title") this is title
+              button(class="button is-link readmore_button") let's read
+              button(class=" button is-primary is-light number_comments" ) Comments: 30 
+
+    div(class="columns  is-mobile")
+      div(class="column  is-12") 
+        div(class="tile")
+          div(class="tile is-parent is-vertical")
+            article(class="tile is-child notification is-primary")
+              img(class="headshot", src="./pics/lol.png")
+              img(class="thumbup", src="./pics/thumbup.png")
+              button(class="button is-primary is-light thumbup_number") 50
+
+              p(class="story_title") this is title
+              button(class="button is-link readmore_button") let's read
+              button(class=" button is-primary is-light number_comments" ) Comments: 30 
+
+
+  style(type="text/css").
+    .main_container{
+    text-align: center; /*让div内部文字居中*/
+        margin: 100px 100px 75px 200px;
+        width: 600px;
+        height: 1000px;
+         position: relative;
+  
+      }
+      .tile{
+        height:300px;
+      }
+    #lol{
+        display: flex;
+
+    }
+    .readmore_button{
+     left:280px;
+      position: relative;
+      bottom : 280px;
+    width:120px;
+    margin:20px;
+    
+    }
+    .story_title{
+      font-size: 30px;
+      left:180px;
+      position: relative;
+      bottom : 250px;
+      width:400px;
+      height:120px;
+    }
+    .headshot{
+      width:180px;
+      height:220px;
+    position: relative;
+    right: 150px;
+    }
+
+    .thumbup{
+      width:40px;
+      height:40px;
+          position: relative;
+      bottom:10px;
+
+      right:140px;
+    }
+    .thumbup_number{
+      position: relative;
+      top:170px;
+       width:40px;
+      height:40px;
+      right:130px;
+
+    }
+    .number_comments{
+      bottom:175px;
+      width:120px;
+      right:100
+    }
+    .icon_test{
+      height:100px;
+      width:200px;
+    }
+

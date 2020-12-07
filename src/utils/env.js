@@ -15,7 +15,7 @@ let MONGODB_URI;
 
 switch (ENV) {
   case 'test': {
-    MONGODB_URI = null; // use in-memory DB
+    MONGODB_URI = process.env.MONGODB_TEST_URI;
     break;
   }
   case 'prod': {

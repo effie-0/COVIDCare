@@ -1,10 +1,35 @@
-body {
-  padding: 5px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+html{
+  min-height: 100%;/* make sure it is at least as tall as the viewport */
+  position: relative;
 }
 
-a {
-  color: #00B7FF;
+body {
+  padding: 30px;
+  font: 14px sans-serif, "Lucida Grande", Helvetica, Arial;
+  height: 100vh;
+}
+
+
+p.top {
+  vertical-align:top
+}
+
+p.right {
+  position:relative;
+  float:right;
+  top: 0;
+  right: 0;
+}
+
+.astext {
+  background:none;
+  border:none;
+  margin:0;
+  padding:0;
+  cursor: pointer;
+
+.bottom-border {
+  border-bottom: 1px solid lightgray;
 }
 
 #back-button {
