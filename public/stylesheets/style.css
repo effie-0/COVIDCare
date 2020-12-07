@@ -22,11 +22,12 @@ p.right {
 }
 
 .astext {
-  background:none;
-  border:none;
-  margin:0;
-  padding:0;
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
   cursor: pointer;
+}
 
 .bottom-border {
   border-bottom: 1px solid lightgray;
