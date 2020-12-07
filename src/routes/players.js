@@ -9,13 +9,12 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:user', (req, res) => {
-  let user = req.params.user;
-  res.render('users', { users, user });
+  res.render('users', { users, user : req.params.user });
 });
 
 router.get('/:source/:user', (req, res) => {
-  let user = req.params.user;
-  let source = req.params.source;
+  const user = req.params.user;
+  const source = req.params.source;
   res.render('request', { users, user, source });
 });
 
