@@ -8,6 +8,6 @@ router.get('/', (req, res) => {
   res.send('respond with a resource');
 });
 
-router.post('/', UserController.signin);
+router.post('/', UserController.login);
 
 export default router;

@@ -1,8 +1,22 @@
 extends layout
 
 block script
-  script(type="module" src="/javascripts/sign-in.js")
+  script(type="module" src="/javascripts/login.js")
 
 block content
-  h1= title
-  p Welcome to  #{title}
+  article(class="message pt-1")
+    div(class="message-header")
+      p Welcome!
+    div(class="message-body") Hello! You haven’t entered your daily health status yet
+  div.pb-6
+  div.content.is-medium
+    div.block.bottom-border
+      a.has-text-primary(href="") Health Status
+    div.block.bottom-border
+      a.has-text-primary(href="") Emotion
+    div.block.bottom-border
+      a.has-text-primary(href="") Meditation
+    div.block.bottom-border
+      a.has-text-primary(href="") Multi-player Game
+    div.block.bottom-border
+      a.has-text-primary(href="storypreview") COVID Stories
