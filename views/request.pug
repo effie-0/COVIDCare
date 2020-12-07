@@ -21,7 +21,7 @@ block content
         h2 Players Online
 
     table
-      each val, index in online_users
+      each val, index in users
         if val.name != user && val.name != source
           tr
             td.center #{val.name}
