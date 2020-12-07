@@ -10,16 +10,16 @@ router.get('/', (req, res) => {
 });
 // http://localhost:3000/storysharing/storydetailsData
 router.get('/storydetailsData', (req, res) => {
-  const final_respond = storysharingController.allStories(req, res);
+  const finalRespond = storysharingController.allStories(req, res);
 
-  res.send(final_respond);
+  res.send(finalRespond);
 });
 
 // http://localhost:3000/storysharing/addstorydetailsData
 router.post('/addstorydetailsData', (req, res) => {
-  const final_respond = storysharingController.addstoryDetails(req, res);
+  const finalRespond = storysharingController.addstoryDetails(req, res);
 
-  res.send(final_respond);
+  res.send(finalRespond);
 });
 
 export default router;
