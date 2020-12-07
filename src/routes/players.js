@@ -9,13 +9,11 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:user', (req, res) => {
-  res.render('users', { users, user : req.params.user });
+  res.render('users', { users, user: req.params.user });
 });
 
 router.get('/:source/:user', (req, res) => {
-  const user = req.params.user;
-  const source = req.params.source;
-  res.render('request', { users, user, source });
+  res.render('request', { users, user: req.params.user, source: req.params.source });
 });
 
 export default router;
