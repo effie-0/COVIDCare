@@ -20,7 +20,6 @@ block content
       p
         h2 Players Online
 
-    //source: Arun user: Sanjay
     table
       each val, index in online_users
         if val.name != user && val.name != source
@@ -34,7 +33,16 @@ block content
             tr
               td.center #{val.name}
                 td
-                  a(href=`/game/${val.name}vs${user}`)
-                    button.btn.btn-danger(type='button' id=`${val.name}` value=`${val.name}`) Accept
+                  a(id = "redirect" href=`/game/${val.name}vs${user}`)
+                    button.btn.btn-danger(type='button' id=`${val.name}` value=`${val.name}` onclick="return sendRequest()") Accept
+  div(onload="sendRequest()")
+  script.
+    function sendRequest() {
+      if (confirm('Do you want to accept the game request?')) {
+        return true;
+      } else {
+        return false;
+      }
+    }
     head
     
