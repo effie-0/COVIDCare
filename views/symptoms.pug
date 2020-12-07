@@ -1,0 +1,63 @@
+extends layout
+
+block content
+  form(action="")
+    label.label Please Enter Your Body Temperature
+    .field.has-addons.py-1
+      .control.is-expanded
+        input.input(type="text" placeholder="Temperature")
+      .control
+        span.select
+          select
+            option °C
+            option °F
+    .field.py-2
+      label.label.py-1 Please Select All Your Symptoms
+      .control
+        .level.is-mobile
+          .level-left
+            input.level-item(type="checkbox" name="1" id="group1")
+            label.checkbox.level-item(for="group1") Intense shivering or chills
+        .level.is-mobile
+          .level-left
+            input.level-item(type="checkbox" name="2" id="group2")
+            label.checkbox.level-item(for="group2") Cough
+        .level.is-mobile
+          .level-left
+            input.level-item(type="checkbox" name="3" id="group3")
+            label.checkbox.level-item(for="group3") Shortness of breath or difficulty breathing
+        .level.is-mobile
+          .level-left
+            input.level-item(type="checkbox" name="4" id="group4")
+            label.checkbox.level-item(for="group4") Unusual fatigue
+        .level.is-mobile
+          .level-left
+            input.level-item(type="checkbox" name="5" id="group5")
+            label.checkbox.level-item(for="group1") Muscle or body aches
+        .level.is-mobile
+          .level-left
+            input.level-item(type="checkbox" name="6" id="group6")
+            label.checkbox.level-item(for="group6") Headache
+        .level.is-mobile
+          .level-left
+            input.level-item(type="checkbox" name="7" id="group7")
+            label.checkbox.level-item(for="group7") New loss of taste or smell
+        .level.is-mobile
+          .level-left
+            input.level-item(type="checkbox" name="8" id="group8")
+            label.checkbox.level-item(for="group8") Sore throat
+        .level.is-mobile
+          .level-left
+            input.level-item(type="checkbox" name="9" id="group9")
+            label.checkbox.level-item(for="group9") Congestion or runny nose
+        .level.is-mobile
+          .level-left
+            input.level-item(type="checkbox" name="10" id="group10")
+            label.checkbox.level-item(for="group10") Nausea or vomiting
+        .level.is-mobile
+          .level-left
+            input.level-item(type="checkbox" name="11" id="group11")
+            label.checkbox.level-item(for="group11") Diarrhea
+    .field.py-2
+      .control.is-expanded
+        a.button.is-primary(href="health") Done!
