@@ -1,6 +1,8 @@
 extends layout
 
 block content
+  meta(name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+
   div(class="main_container")
     h1(class="title")=title
     div(class="columns  is-mobile ")
@@ -62,12 +64,14 @@ block content
           a.pagination-link(aria-label='Goto page 7') 7
 
   style(type="text/css").
+  
     .main_container{
-    text-align: center; /*让div内部文字居中*/
-        margin: 100px 100px 75px 200px;
-        width: 600px;
-        height: 1000px;
+        text-align: center; /*让div内部文字居中*/
          position: relative;
+        width: 110%;
+        margin-left: 5%;
+        margin-right:5%;
+        right:25px
   
       }
       .tile{
@@ -78,48 +82,47 @@ block content
 
     }
     .readmore_button{
-     left:280px;
+      left:90px;
       position: relative;
-      bottom : 280px;
-    width:120px;
-    margin:20px;
+      bottom : 180px;
+      width:120px;
+      margin:20px;
     
     }
     .story_title{
-      font-size: 30px;
-      left:160px;
+      font-size: 20px;
+      left:100px;
       position: relative;
-      bottom : 240px;
-      width:400px;
+      bottom :160px;
+      width:200px;
       height:120px;
     }
     .headshot{
-      width:180px;
-      height:220px;
-    position: relative;
-    right: 150px;
+      width:120px;
+      height:150px;
+      position: relative;
+      right: 50px;
     }
 
     .thumbup{
       width:40px;
       height:40px;
-          position: relative;
-      bottom:10px;
-
-      right:140px;
+      position: relative;
+      top:60px;
+      right:120px;
     }
     .thumbup_number{
       position: relative;
       top:170px;
        width:40px;
       height:40px;
-      right:130px;
+      right:100px
 
     }
     .number_comments{
-      bottom:175px;
+      bottom:185px;
       width:120px;
-      right:100
+      left:90px
     }
     .icon_test{
       height:100px;

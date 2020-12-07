@@ -9,6 +9,74 @@ body {
   height: 100vh;
 }
 
+
+p.top {
+  vertical-align:top
+}
+
+p.right {
+  position:relative;
+  float:right;
+  top: 0;
+  right: 0;
+}
+
+.astext {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
 .bottom-border {
   border-bottom: 1px solid lightgray;
 }
+
+#back-button {
+  margin: auto;
+  width: 10%;
+  display:inline-block;
+  color: #5DB075;
+}
+
+#header {
+  margin: auto;
+  width: 90%;
+  display:inline-block;
+  text-align: center;
+}
+
+#no-entry {
+  margin: auto;
+  width: 100%;
+  text-align: center;
+}
+
+#snooze {
+  width: 100%;
+}
+
+.footer-button {
+  width: 16%;
+  height: 50px;
+  border: white;
+  padding: 0px;
+}
+
+footer {
+  position:absolute;
+  bottom:0;
+  width:100%;
+}
+
+.jumbotron-fluid {
+  background-color: #D3FDDF;
+  padding: 20px;
+}
+
+.emotion {
+  width: 33%;
+}
+
+
