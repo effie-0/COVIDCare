@@ -1,0 +1,22 @@
+[
+
+    {
+        "game_name": "Tic Tac Toe",
+        "game_id": "1",
+        "rating": "4.2",
+        "number_of_users": 999,
+        "daily_users":500
+    }, {
+        "game_name": "Ninja 2",
+        "game_id": "1",
+        "rating": "4.2",
+        "number_of_users": 999,
+        "daily_users":500
+    }, {
+        "game_name": "Mortal Kombat",
+        "game_id": "1",
+        "rating": "4.2",
+        "number_of_users": 999,
+        "daily_users":500
+    }
+]
