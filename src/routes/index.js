@@ -12,7 +12,9 @@ router.get('/', (req, res) => {
 });
 
 router.get('/storyPreview', (req, res) => {
-  fetch('https://srid-covid-care.herokuapp.com/storysharing/storydetailsData')
+  //https://srid-covid-care.herokuapp.com/storysharing/storydetailsData
+
+  fetch('http://localhost:3000/storysharing/storydetailsData')
     .then(
       (response) => {
         if (response.status !== 200) {

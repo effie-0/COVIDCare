@@ -11,9 +11,7 @@ block content
     }
     console.log("value is",comment)
      $.post("https://srid-covid-care.herokuapp.com/storysharing/addstorydetailsData",tmp)
-    
     location.reload();
-
     };
 
 
@@ -29,7 +27,7 @@ block content
     link(rel='stylesheet' href='css/app.css')
   nav.navbar.is-transparent
     .navbar-brand
-      a.navbar-item(href='https://bulma.io')
+      a.navbar-item(href='/storyPreview',style="color: #c5ab8a" ) Back 
       .navbar-burger.burger(data-target='navbarExampleTransparentExample')
         span
         span
