@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/storyPreview', (req, res) => {
-  fetch('/storysharing/storydetailsData')
+  fetch('https://srid-covid-care.herokuapp.com/storysharing/storydetailsData')
     .then(
       (response) => {
         if (response.status !== 200) {
@@ -48,7 +48,7 @@ router.get('/storyPreview', (req, res) => {
 });
 
 router.get('/storydetail', (req, res) => {
-  fetch('/storysharing/storydetailsData')
+  fetch('https://srid-covid-care.herokuapp.com/storysharing/storydetailsData')
     .then(
       (response) => {
         if (response.status !== 200) {
