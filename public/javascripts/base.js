@@ -3,3 +3,7 @@ $("#back_btn").click(function () {
     window.history.back();
   }
 });
+
+if ($(location).attr('pathname').includes('status')) {
+  $('#nav').hide();
+}
