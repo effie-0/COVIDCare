@@ -50,5 +50,5 @@ $ npm start
 ### COVID Story
 
 - User stories data are hard-coded
-- User comments are gard-codeda and will not be recorded in the backend
+- User comments are hard-coded and will not be recorded in the backend
 - Sort button based on users' preference will be a part of Product Increment 2.
