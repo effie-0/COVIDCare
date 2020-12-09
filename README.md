@@ -38,8 +38,6 @@ $ npm start
 - Hints for today's health status will be a part of Product Increment 2.
 - The health record submitted by the form will not be recorded in the backend.
 - The previous health records are hard-coded.
-- User stories data are hard-coded
-- User comments are gard-codeda and will not be recorded in the backend
 
 ### Emotion
 
@@ -50,3 +48,7 @@ $ npm start
 - In multi player games, list of users and games are hard-coded and session are not implemented for users as well.
 
 ### COVID Story
+
+- User stories data are hard-coded
+- User comments are gard-codeda and will not be recorded in the backend
+- Sort button based on users' preference will be a part of Product Increment 2.
