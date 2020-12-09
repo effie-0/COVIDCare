@@ -32,4 +32,5 @@
 ### Emotion
 ### Meditation
 ### Multi-player Game
+- In multi player games, list of users and games are hard-coded and session are not implemented for users as well.
 ### COVID Story
