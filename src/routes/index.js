@@ -12,7 +12,9 @@ router.get('/', (req, res) => {
 });
 
 router.get('/storyPreview', (req, res) => {
-  fetch('https://srid-covid-care.herokuapp.com/storysharing/storydetailsData')
+    //fetch('https://srid-covid-care.herokuapp.com/storysharing/storydetailsData')
+
+  fetch('http://localhost:3000/storysharing/storydetailsData')
     .then(
       (response) => {
         if (response.status !== 200) {
@@ -25,19 +27,19 @@ router.get('/storyPreview', (req, res) => {
         response.json().then((data) => {
           console.log(data);
 
-          console.log(`哈哈啊 ${data.data[0].title}`);
+          console.log(`哈哈啊 ${data.data[0].numberOfThumbsup}`);
 
           res.render('storyPreview', {
             title: 'Stroy preview ',
             story_title_1: data.data[0].title,
             story_title_2: data.data[1].title,
             story_title_3: data.data[2].title,
-            thumbup_number_1: '10',
-            thumbup_number_2: '20',
-            thumbup_number_3: '30',
-            comment_number_1: '10',
-            comment_number_2: '20',
-            comment_number_3: '30',
+            thumbup_number_1: data.data[0].numberOfThumbsup,
+            thumbup_number_2: data.data[1].numberOfThumbsup,
+            thumbup_number_3: data.data[2].numberOfThumbsup,
+            comment_number_1: data.data[0].numberOfComments,
+            comment_number_2: data.data[1].numberOfComments,
+            comment_number_3: data.data[2].numberOfComments,
           });
         });
       },

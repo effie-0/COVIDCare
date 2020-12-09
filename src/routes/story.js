@@ -21,4 +21,11 @@ router.post('/addstorydetailsData', (req, res) => {
   res.send(finalRespond);
 });
 
+// http://localhost:3000/storysharing/sortstorydetailsData
+router.get('/sortstorydetailsData', (req, res) => {
+  const finalRespond = storysharingController.sortData(req,res)
+  res.send(finalRespond);
+});
+
+
 export default router;

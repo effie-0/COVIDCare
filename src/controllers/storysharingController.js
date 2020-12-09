@@ -11,6 +11,22 @@ class storysharingController {
     });
   }
 
+    static async sortData(req, res) {
+    const lol = storyDetail;
+
+   let sortedInput= lol.slice().sort(
+    (a, b) => b.number_of_thumbsup - a.number_of_thumbsup
+    );
+
+    console.log("res is ",sortedInput)
+    return res.status(200).json({
+      code: 1,
+      message: 'success',
+      data: sortedInput,
+    });
+  }
+
+
   static async storyDetails(req, res) {
     const storyData = storyDetail;
     return res.status(200).json({
