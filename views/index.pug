@@ -1,22 +1,19 @@
 extends layout
 
-block script
-  script(type="module" src="/javascripts/login.js")
-
 block content
-  article(class="message pt-1")
+  article(class="message pt-2")
     div(class="message-header")
       p Welcome!
     div(class="message-body") Hello! You haven’t entered your daily health status yet
   div.pb-6
   div.content.is-medium
     div.block.bottom-border
-      a.has-text-primary(href="") Health Status
+      a.has-text-primary(href="health") Health Status
     div.block.bottom-border
-      a.has-text-primary(href="") Emotion
+      a.has-text-primary(href="status") Emotion
     div.block.bottom-border
-      a.has-text-primary(href="") Meditation
+      a.has-text-primary(href="meditations") Meditation
     div.block.bottom-border
-      a.has-text-primary(href="") Multi-player Game
+      a.has-text-primary(href="games") Multi-player Game
     div.block.bottom-border
-      a.has-text-primary(href="storypreview") COVID Stories
+      a.has-text-primary(href="storypreview") COVID Story

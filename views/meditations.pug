@@ -12,12 +12,12 @@ block content
   center
     div(class="container-fluid")
       p
-        h2 List of Games
+        h2 List of meditations
       
-      each val in games
+      each val in meditations
         .same-width.col-sm-3
           br
-          a(href=`/games/${val.game_name}` style='text-decoration: none;')
-            button.btn.btn-success.btn-block(type='button') #{val.game_name}
+          a(href=`/meditations/${val.name}` style='text-decoration: none;')
+            button.btn.btn-success.btn-block(type='button') #{val.name}
           br
     

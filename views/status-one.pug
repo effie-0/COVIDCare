@@ -1,0 +1,33 @@
+extends layout
+
+block style
+    link(href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet")
+    link(href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet")
+    link(rel='stylesheet' type="text/css" href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh' crossorigin='anonymous')
+
+block links
+
+    body.bg-light
+        a(id='back-button', href='/') back
+        div(id='header')
+            h2 December 2020
+        br
+        .jumbotron.jumbotron-fluid Monday, December 7, 2020
+            .container
+                h5.display-4 Relax
+                p.lead Awesome
+                p.end 12:00 PM
+        footer.page-footer.font-small.cyan.darken-3
+            .container
+                .row
+                    div.footer-button(id='emotion-highlight')
+                        img(src='./images/emotion-highlight.png')
+                    a.footer-button(id='history-dark', href='/status-one-calendar')
+                        img(src='./images/history-dark.png')
+                    div.footer-button(id='add')
+                        img(src='./images/add.png')
+                    div.footer-button(id='edit-dark')
+                        img(src='./images/edit-dark.png')
+                    a.footer-button(id='home-dark', href='/')
+                        img(src='./images/home-dark.png')
+

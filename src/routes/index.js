@@ -1,6 +1,8 @@
 import express from 'express';
+import HealthController from '../controllers/health';
 
 const fetch = require('node-fetch');
+const indexController = require('../controllers/index');
 
 const router = express.Router();
 
@@ -8,6 +10,30 @@ const router = express.Router();
 router.get('/', (req, res) => {
   res.render('index', {
     title: 'Express',
+  });
+});
+
+// health status
+router.get('/health', (req, res) => {
+  res.render('health');
+});
+
+router.get('/symptoms', (req, res) => {
+  res.render('symptoms');
+});
+
+router.get('/health-records', (req, res) => {
+  const healthRecords = HealthController.getAllRecords();
+  res.render('health-records', {
+    healthRecords,
+  });
+});
+
+router.get('/record-details/:time', (req, res) => {
+  const { time } = req.params;
+  const record = HealthController.getRecord(time);
+  res.render('record-details', {
+    record,
   });
 });
 
@@ -77,5 +103,11 @@ router.get('/storydetail', (req, res) => {
       console.log('Fetch Error :-S', err);
     });
 });
+
+router.get('/status', indexController.statusPage);
+router.get('/status-empty-add', indexController.statusEmptyAddPage);
+router.get('/status-empty-calendar', indexController.statusEmptyCalendarPage);
+router.get('/status-one', indexController.statusOnePage);
+router.get('/status-one-calendar', indexController.statusOneCalendarPage);
 
 export default router;

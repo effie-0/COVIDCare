@@ -7,6 +7,7 @@ import logger from 'morgan';
 import indexRouter from './routes/index';
 import usersRouter from './routes/user';
 import storyRouter from './routes/story';
+import meditationsRouter from './routes/meditations';
 import playersRouter from './routes/players';
 import gamesRouter from './routes/games';
 import gameRouter from './routes/game';
@@ -32,6 +33,7 @@ app.use('/games', gamesRouter);
 app.use('/game', gameRouter);
 app.use('/users', usersRouter);
 app.use('/storysharing', storyRouter);
+app.use('/meditations', meditationsRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

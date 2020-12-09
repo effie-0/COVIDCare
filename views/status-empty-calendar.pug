@@ -1,0 +1,109 @@
+extends layout
+
+block scripts
+    link(href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet")
+    link(href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet")
+    link(rel='stylesheet' type="text/css" href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh' crossorigin='anonymous')
+    link(rel='stylesheet', href='/stylesheets/calendar.css')
+
+block links
+
+    body.bg-light
+        a(id='back-button', href='/status') back
+        div(id='header')
+            h2 December 2020
+        br
+        .container
+            .calendar.shadow.bg-light
+                ol.day-names.list-unstyled
+                    li.font-weight-bold.text-uppercase S
+                    li.font-weight-bold.text-uppercase M
+                    li.font-weight-bold.text-uppercase T
+                    li.font-weight-bold.text-uppercase W
+                    li.font-weight-bold.text-uppercase T
+                    li.font-weight-bold.text-uppercase F
+                    li.font-weight-bold.text-uppercase S
+                ol.days.list-unstyled
+                    li.outside
+                        .date 29
+                    li.outside
+                        .date 30
+                    li
+                        .date 1
+                    li
+                        .date 2
+                    li
+                        .date 3
+                    li
+                        .date 4
+                    li
+                        .date 5
+                    li
+                        .date 6
+                    li
+                        .date 7
+                    li
+                        .date 8
+                    li
+                        .date 9
+                    li
+                        .date 10
+                    li
+                        .date 11
+                    li
+                        .date 12
+                    li
+                        .date 13
+                    li
+                        .date 14
+                    li
+                        .date 15
+                    li
+                        .date 16
+                    li
+                        .date 17
+                    li
+                        .date 18
+                    li
+                        .date 19
+                    li
+                        .date 20
+                    li
+                        .date 21
+                    li
+                        .date 22
+                    li
+                        .date 23
+                    li
+                        .date 24
+                    li
+                        .date 25
+                    li
+                        .date 26
+                    li
+                        .date 27
+                    li
+                        .date 28
+                    li
+                        .date 29
+                    li
+                        .date 30
+                    li
+                        .date 31
+                    li.outside
+                        .date 1
+                    li.outside
+                        .date 2
+        footer.page-footer.font-small.cyan.darken-3
+            .container
+                .row
+                    a.footer-button(id='emotion-dark', href='/status')
+                        img(src='./images/emotion-dark.png')
+                    div.footer-button(id='history-highlight')
+                        img(src='./images/history-highlight.png')
+                    a.footer-button(id='add', href='/status-empty-add')
+                        img(src='./images/add.png')
+                    div.footer-button(id='edit-dark')
+                        img(src='./images/edit-dark.png')
+                    a.footer-button(id='home-dark', href='/')
+                        img(src='./images/home-dark.png')

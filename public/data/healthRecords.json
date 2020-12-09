@@ -1,0 +1,26 @@
+[
+  {
+    "time": "2020-12-07T11:18:17.036Z",
+    "month": 12,
+    "day": 7,
+    "temperature": 36.7,
+    "isCelsius": true,
+    "symptoms": [ "Cough", "Unusual fatigue" ]
+  },
+  {
+    "time": "2020-12-06T09:13:06.022Z",
+    "month": 12,
+    "day": 6,
+    "temperature": 37.2,
+    "isCelsius": true,
+    "symptoms": [ "Cough", "Headache", "Sore throat" ]
+  },
+  {
+    "time": "2020-12-05T18:23:22.012Z",
+    "month": 12,
+    "day": 5,
+    "temperature": 38.4,
+    "isCelsius": true,
+    "symptoms": [ "Cough", "Headache", "Sore throat", "Congestion or runny nose" ]
+  }
+]
