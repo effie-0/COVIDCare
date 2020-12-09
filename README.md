@@ -15,7 +15,7 @@
 - Backend: Express, with Babel to transpile the ES6 code
 - Database (not used in Product Increment 1): MongoDB
 - Frontend:
-  - Pug as the template engine,
+  - Pug as the template engine
   - Bulma (with Font Awesome icons), Bootstrap as frontend libraries
   - JQeury as frontend js library
 
