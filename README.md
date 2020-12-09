@@ -46,5 +46,9 @@ $ npm start
 ### Meditation
 
 ### Multi-player Game
+<<<<<<< HEAD
 
+=======
+- In multi player games, list of users and games are hard-coded and session are not implemented for users as well.
+>>>>>>> 9bdb0933744e29de02543b545f43249e4c9066ef
 ### COVID Story
