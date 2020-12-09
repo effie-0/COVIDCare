@@ -43,12 +43,17 @@ $ npm start
 
 ### Meditation
 
+- Meditation Physical posture video animation will be a part of Product Increment 2.
+-	Different type of smoothing music should be a part of Product Increment 2, currently we have limited type of music.
+-	Greeting patient with a beautiful positive quote will be a part of Product Increment 2.
+
+
 ### Multi-player Game
 
 - In multi player games, list of users and games are hard-coded and session are not implemented for users as well.
 
 ### COVID Story
 
-- User stories data are hard-coded
-- User comments are hard-coded and will not be recorded in the backend
-- Sort button based on users' preference will be a part of Product Increment 2.
+- User stories data are hard-coded.
+- User comments are hard-coded and will not be recorded in the backend.
+- Sort button based on users' preferences will be a part of Product Increment 2.
