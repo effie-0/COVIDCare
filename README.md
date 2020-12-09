@@ -23,6 +23,7 @@
 - [Style Guide](https://drive.google.com/file/d/1rmTzc3bJm9RRjVsINbyPQP6exCSvtLHA/view?usp=sharing)
 
 ## Limitations
+- In multi player games, list of users and games are hard-coded and session are not implemented for users as well.
 ### Health Status
 - The check on the completeness of the form will be a part of Product Increment 2.
 - Hints for today's health status will be a part of Product Increment 2.
