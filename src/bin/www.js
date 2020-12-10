@@ -5,8 +5,8 @@
  */
 
 import debugLib from 'debug';
-import { MONGO_URI } from '../utils/env';
-import connect from '../utils/connect';
+// import { MONGO_URI } from '../utils/env';
+// import connect from '../utils/connect';
 import app from '../app';
 
 // set up debug
@@ -15,7 +15,7 @@ const debug = debugLib('src:server');
 /**
  * Set up DB
  */
-connect(MONGO_URI);
+// connect(MONGO_URI);
 
 /**
  * Normalize a port into a number, string, or false.
