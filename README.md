@@ -41,6 +41,10 @@ $ npm start
 
 ### Emotion
 
+- Is able to input different date and time, but the history has only 12/7 available
+- Can only register "Awesome" right now
+- Unable to edit past records
+
 ### Meditation
 
 - Meditation Physical posture video animation will be a part of Product Increment 2.
